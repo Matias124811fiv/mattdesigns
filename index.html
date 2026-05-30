@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MattDesigns — Diseño Web que Convierte</title>
+  <meta name="description" content="Creamos webs profesionales que generan clientes reales. Diseño web premium, SEO y estrategia digital para negocios que quieren crecer." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Matt<span>Designs</span></a>
+      <ul class="nav__links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--sm btn--outline nav__cta">Hablemos</a>
+      <button class="nav__burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge reveal-up">
+        <span class="hero__badge-dot"></span>
+        Diseño web premium · Resultados reales
+      </div>
+      <h1 class="hero__title reveal-up">
+        Tu web debería<br />
+        <span class="hero__gradient">conseguirte clientes</span><br />
+        mientras duermes
+      </h1>
+      <p class="hero__sub reveal-up">
+        Creamos webs que no solo se ven increíbles, sino que convierten visitantes en leads cualificados. Sin plantillas genéricas. Sin excusas.
+      </p>
+      <div class="hero__actions reveal-up">
+        <a href="#contacto" class="btn btn--primary btn--lg">
+          Quiero mi web gratis →
+        </a>
+        <a href="#proyectos" class="btn btn--ghost btn--lg">
+          Ver proyectos
+        </a>
+      </div>
+      <div class="hero__trust reveal-up">
+        <div class="hero__avatars">
+          <img src="https://i.pravatar.cc/40?img=1" alt="cliente" />
+          <img src="https://i.pravatar.cc/40?img=2" alt="cliente" />
+          <img src="https://i.pravatar.cc/40?img=3" alt="cliente" />
+          <img src="https://i.pravatar.cc/40?img=4" alt="cliente" />
+          <img src="https://i.pravatar.cc/40?img=5" alt="cliente" />
+        </div>
+        <div class="hero__trust-text">
+          <strong>+120 negocios</strong> ya confían en nosotros<br />
+          <span class="stars">★★★★★</span> 4.9/5 valoración media
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- LOGOS STRIP -->
+  <section class="logos">
+    <p class="logos__label">Trabajamos con negocios de todos los sectores</p>
+    <div class="logos__track">
+      <div class="logos__inner">
+        <span>Restaurantes</span>
+        <span>Clínicas</span>
+        <span>Inmobiliarias</span>
+        <span>Abogados</span>
+        <span>E-commerce</span>
+        <span>Coaches</span>
+        <span>Arquitectos</span>
+        <span>Startups</span>
+        <span>Restaurantes</span>
+        <span>Clínicas</span>
+        <span>Inmobiliarias</span>
+        <span>Abogados</span>
+        <span>E-commerce</span>
+        <span>Coaches</span>
+        <span>Arquitectos</span>
+        <span>Startups</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat reveal-up">
+          <span class="stat__num" data-target="120">0</span><span class="stat__suffix">+</span>
+          <p>Proyectos entregados</p>
+        </div>
+        <div class="stat reveal-up">
+          <span class="stat__num" data-target="94">0</span><span class="stat__suffix">%</span>
+          <p>Clientes que repiten</p>
+        </div>
+        <div class="stat reveal-up">
+          <span class="stat__num" data-target="3">0</span><span class="stat__suffix">x</span>
+          <p>Más leads de media</p>
+        </div>
+        <div class="stat reveal-up">
+          <span class="stat__num" data-target="7">0</span><span class="stat__suffix">d</span>
+          <p>Tiempo de entrega</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Servicios</span>
+        <h2>Todo lo que necesitas<br /><span class="gradient-text">en un solo lugar</span></h2>
+        <p>Desde el diseño hasta la captación de leads, lo hacemos todo.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card reveal-left">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Diseño Web Premium</h3>
+          <p>Webs a medida que reflejan tu marca y comunican valor desde el primer scroll. Responsive, rápidas y accesibles.</p>
+          <ul>
+            <li>Diseño único 100% personalizado</li>
+            <li>Animaciones profesionales</li>
+            <li>Optimización móvil perfecta</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Captación de Leads</h3>
+          <p>Diseñamos cada sección para guiar al visitante hacia la acción. CTAs estratégicos, formularios y funnels que convierten.</p>
+          <ul>
+            <li>Estrategia de conversión</li>
+            <li>Formularios optimizados</li>
+            <li>A/B testing incluido</li>
+          </ul>
+          <div class="service-card__badge">Más popular</div>
+        </div>
+        <div class="service-card reveal-right">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3>SEO & Posicionamiento</h3>
+          <p>Tu web invisible no genera clientes. Optimizamos para que Google te encuentre y te ponga por delante de la competencia.</p>
+          <ul>
+            <li>SEO técnico y on-page</li>
+            <li>Velocidad Core Web Vitals</li>
+            <li>Informe mensual de resultados</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-left">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Email Marketing</h3>
+          <p>Convertimos los leads que capta tu web en clientes de pago con secuencias de email automatizadas y personalizadas.</p>
+          <ul>
+            <li>Secuencias automatizadas</li>
+            <li>Segmentación avanzada</li>
+            <li>Tasas de apertura +40%</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Landing Pages</h3>
+          <p>Una sola página diseñada para convertir al máximo. Perfectas para lanzamientos, campañas de anuncios y eventos.</p>
+          <ul>
+            <li>Entrega en 48 horas</li>
+            <li>Integración con Google Ads</li>
+            <li>Seguimiento de conversiones</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-right">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Mantenimiento & Soporte</h3>
+          <p>Tu web siempre actualizada, segura y funcionando al 100%. Soporte técnico con respuesta en menos de 24h.</p>
+          <ul>
+            <li>Actualizaciones periódicas</li>
+            <li>Backups diarios</li>
+            <li>Soporte prioritario</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner reveal-up">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <div>
+          <h2>¿Tu web actual no genera leads?</h2>
+          <p>Analizamos tu web gratis y te decimos exactamente qué está fallando.</p>
+        </div>
+        <a href="#contacto" class="btn btn--primary btn--lg">Análisis gratuito →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="projects" id="proyectos">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Portfolio</span>
+        <h2>Proyectos que<br /><span class="gradient-text">hablan por sí solos</span></h2>
+        <p>Cada web que entregamos está pensada para convertir desde el primer día.</p>
+      </div>
+      <div class="projects__grid">
+        <div class="project-card reveal-up" data-category="E-commerce">
+          <div class="project-card__img" style="background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);">
+            <div class="project-card__overlay">
+              <span class="project-card__tag">E-commerce</span>
+              <h4>Moda Sostenible Online</h4>
+              <p>+340% en conversiones en 3 meses</p>
+            </div>
+            <div class="project-card__mockup">
+              <div class="mockup-bar"></div>
+              <div class="mockup-content">
+                <div class="mockup-img"></div>
+                <div class="mockup-lines">
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal-up" data-category="Servicios">
+          <div class="project-card__img" style="background: linear-gradient(135deg,#0d1b2a,#1b4332,#40916c);">
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Clínica</span>
+              <h4>Clínica Dental Premium</h4>
+              <p>+85 nuevos pacientes/mes desde la web</p>
+            </div>
+            <div class="project-card__mockup">
+              <div class="mockup-bar"></div>
+              <div class="mockup-content">
+                <div class="mockup-img" style="background:rgba(64,145,108,.3)"></div>
+                <div class="mockup-lines">
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal-up" data-category="Inmobiliaria">
+          <div class="project-card__img" style="background: linear-gradient(135deg,#2d1b69,#553c9a,#b794f4);">
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Inmobiliaria</span>
+              <h4>Luxury Real Estate</h4>
+              <p>12 propiedades vendidas en 30 días</p>
+            </div>
+            <div class="project-card__mockup">
+              <div class="mockup-bar"></div>
+              <div class="mockup-content">
+                <div class="mockup-img" style="background:rgba(183,148,244,.2)"></div>
+                <div class="mockup-lines">
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal-up" data-category="Restaurante">
+          <div class="project-card__img" style="background: linear-gradient(135deg,#7f1d1d,#991b1b,#fca5a5);">
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Restaurante</span>
+              <h4>Gourmet Experience</h4>
+              <p>Reservas online x3 en el primer mes</p>
+            </div>
+            <div class="project-card__mockup">
+              <div class="mockup-bar"></div>
+              <div class="mockup-content">
+                <div class="mockup-img" style="background:rgba(252,165,165,.2)"></div>
+                <div class="mockup-lines">
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Proceso</span>
+        <h2>De cero a web<br /><span class="gradient-text">en 7 días</span></h2>
+        <p>Un proceso claro, sin sorpresas y con resultados garantizados.</p>
+      </div>
+      <div class="process__steps">
+        <div class="process__line"></div>
+        <div class="process__step reveal-left">
+          <div class="process__num">01</div>
+          <div class="process__body">
+            <h3>Llamada de Descubrimiento</h3>
+            <p>30 minutos para entender tu negocio, tus clientes ideales y lo que quieres conseguir con tu web. Sin tecnicismos.</p>
+            <span class="process__time">Día 1</span>
+          </div>
+        </div>
+        <div class="process__step reveal-right">
+          <div class="process__num">02</div>
+          <div class="process__body">
+            <h3>Estrategia & Wireframes</h3>
+            <p>Diseñamos la arquitectura de tu web pensando en la experiencia del usuario y en la captación de leads desde el primer momento.</p>
+            <span class="process__time">Días 2-3</span>
+          </div>
+        </div>
+        <div class="process__step reveal-left">
+          <div class="process__num">03</div>
+          <div class="process__body">
+            <h3>Diseño & Desarrollo</h3>
+            <p>Construimos tu web con animaciones profesionales, código limpio y velocidad de carga optimizada. Ves el progreso en tiempo real.</p>
+            <span class="process__time">Días 4-6</span>
+          </div>
+        </div>
+        <div class="process__step reveal-right">
+          <div class="process__num">04</div>
+          <div class="process__body">
+            <h3>Lanzamiento & Seguimiento</h3>
+            <p>Publicamos, conectamos Analytics y te entregamos un informe de primeras 30 días con datos de tráfico y leads captados.</p>
+            <span class="process__time">Día 7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Testimonios</span>
+        <h2>Lo que dicen<br /><span class="gradient-text">nuestros clientes</span></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"En el primer mes ya teníamos 40 leads nuevos desde la web. Antes con la web antigua conseguíamos cero. La diferencia es brutal."</p>
+          <div class="testimonial-card__author">
+            <img src="https://i.pravatar.cc/48?img=10" alt="Carlos M." />
+            <div>
+              <strong>Carlos M.</strong>
+              <span>CEO, Clínica Dental Sonrisa</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Pensaba que mi web estaba bien. Cuando vi el análisis gratuito que me hicieron entendí por qué nadie me contactaba. Ahora recibo 3-5 consultas al día."</p>
+          <div class="testimonial-card__author">
+            <img src="https://i.pravatar.cc/48?img=20" alt="Laura P." />
+            <div>
+              <strong>Laura P.</strong>
+              <span>Arquitecta independiente</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"El proceso fue rapidísimo y el resultado superó mis expectativas. Entregaron en 6 días y la web es espectacular. Mis clientes me preguntan quién me la hizo."</p>
+          <div class="testimonial-card__author">
+            <img src="https://i.pravatar.cc/48?img=30" alt="Marcos R." />
+            <div>
+              <strong>Marcos R.</strong>
+              <span>Dueño, Restaurante El Portal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="pricing" id="precios">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Precios</span>
+        <h2>Inversión clara,<br /><span class="gradient-text">sin sorpresas</span></h2>
+        <p>Sin letra pequeña. Sin costes ocultos. Sin excusas.</p>
+      </div>
+      <div class="pricing__grid">
+        <div class="pricing-card reveal-left">
+          <div class="pricing-card__header">
+            <span class="pricing-card__name">Starter</span>
+            <div class="pricing-card__price"><span>€</span>697</div>
+            <p>Para negocios que empiezan</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span>✓</span> Web de hasta 5 páginas</li>
+            <li><span>✓</span> Diseño responsive</li>
+            <li><span>✓</span> Formulario de contacto</li>
+            <li><span>✓</span> Google Analytics</li>
+            <li><span>✓</span> SEO básico</li>
+            <li><span>✓</span> Entrega en 7 días</li>
+            <li class="muted"><span>✗</span> Animaciones de scroll</li>
+            <li class="muted"><span>✗</span> Estrategia de conversión</li>
+          </ul>
+          <a href="#contacto" class="btn btn--outline btn--full">Empezar →</a>
+        </div>
+        <div class="pricing-card pricing-card--featured reveal-up">
+          <div class="pricing-card__badge">Más elegido</div>
+          <div class="pricing-card__header">
+            <span class="pricing-card__name">Pro</span>
+            <div class="pricing-card__price"><span>€</span>1.497</div>
+            <p>Para negocios que quieren crecer</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span>✓</span> Web de hasta 10 páginas</li>
+            <li><span>✓</span> Animaciones de scroll premium</li>
+            <li><span>✓</span> Estrategia de captación de leads</li>
+            <li><span>✓</span> SEO completo + velocidad</li>
+            <li><span>✓</span> Integración CRM</li>
+            <li><span>✓</span> 3 meses de soporte</li>
+            <li><span>✓</span> Informe mensual de resultados</li>
+            <li><span>✓</span> Landing page de regalo</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary btn--full">Quiero el Pro →</a>
+        </div>
+        <div class="pricing-card reveal-right">
+          <div class="pricing-card__header">
+            <span class="pricing-card__name">Enterprise</span>
+            <div class="pricing-card__price"><span>€</span>A medida</div>
+            <p>Para empresas y proyectos grandes</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span>✓</span> Páginas ilimitadas</li>
+            <li><span>✓</span> E-commerce completo</li>
+            <li><span>✓</span> Sistema de reservas</li>
+            <li><span>✓</span> Automatizaciones de marketing</li>
+            <li><span>✓</span> Soporte dedicado</li>
+            <li><span>✓</span> SLA garantizado</li>
+            <li><span>✓</span> Consultoría estratégica mensual</li>
+            <li><span>✓</span> Acceso prioritario al equipo</li>
+          </ul>
+          <a href="#contacto" class="btn btn--outline btn--full">Hablemos →</a>
+        </div>
+      </div>
+      <p class="pricing__note reveal-up">Todos los planes incluyen dominio y hosting el primer año. Garantía de devolución en 14 días si no estás satisfecho.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">FAQ</span>
+        <h2>Preguntas<br /><span class="gradient-text">frecuentes</span></h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item reveal-up">
+          <button class="faq__question">¿En cuánto tiempo tengo mi web? <span>+</span></button>
+          <div class="faq__answer"><p>El plan Starter se entrega en 7 días. El Pro puede tardar hasta 10 días dependiendo de la complejidad. Los proyectos Enterprise tienen plazos acordados en la propuesta.</p></div>
+        </div>
+        <div class="faq__item reveal-up">
+          <button class="faq__question">¿Necesito tener todo el contenido listo? <span>+</span></button>
+          <div class="faq__answer"><p>No. Te ayudamos a redactar los textos de tu web enfocados en convertir. Solo necesitamos que nos cuentes tu negocio, lo demás lo hacemos nosotros.</p></div>
+        </div>
+        <div class="faq__item reveal-up">
+          <button class="faq__question">¿Cuántos leads puedo esperar el primer mes? <span>+</span></button>
+          <div class="faq__answer"><p>Depende de tu sector y tráfico actual. Nuestros clientes ven de media un aumento del 200-300% en contactos el primer trimestre. El análisis gratuito te da una estimación real para tu caso.</p></div>
+        </div>
+        <div class="faq__item reveal-up">
+          <button class="faq__question">¿Podré editar la web yo mismo? <span>+</span></button>
+          <div class="faq__answer"><p>Sí. Según el plan, te entregamos acceso a un panel sencillo donde puedes cambiar textos, imágenes y precios sin saber nada de código. También te hacemos una formación de 1 hora.</p></div>
+        </div>
+        <div class="faq__item reveal-up">
+          <button class="faq__question">¿Qué pasa si no me gusta el resultado? <span>+</span></button>
+          <div class="faq__answer"><p>Incluimos 2 rondas de revisiones ilimitadas. Y si tras la entrega final no estás satisfecho, te devolvemos el dinero en 14 días. Sin preguntas.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET BAND -->
+  <section class="lead-magnet reveal-up">
+    <div class="container">
+      <div class="lead-magnet__inner">
+        <div class="lead-magnet__text">
+          <h2>Descarga gratis: <em>"10 errores que alejan clientes de tu web"</em></h2>
+          <p>La guía que usan nuestros clientes para duplicar sus leads en 30 días.</p>
+        </div>
+        <form class="lead-magnet__form" id="leadForm">
+          <input type="email" placeholder="tu@email.com" required />
+          <button type="submit" class="btn btn--primary">Quiero la guía gratis →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__left reveal-left">
+          <span class="section-tag">Contacto</span>
+          <h2>Empieza hoy.<br /><span class="gradient-text">Tu competencia ya lo hace.</span></h2>
+          <p>Cuéntanos tu proyecto. Primera llamada gratis, sin compromiso. Te respondemos en menos de 2 horas en horario laboral.</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+34 600 000 000</span>
+            </div>
+            <div class="contact__info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>hello@mattdesigns.dev</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__right reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="tu@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Tu negocio</label>
+              <input type="text" placeholder="¿A qué se dedica tu empresa?" />
+            </div>
+            <div class="form-group">
+              <label>¿Qué necesitas?</label>
+              <select>
+                <option>Web nueva desde cero</option>
+                <option>Rediseño de web existente</option>
+                <option>Landing page de conversión</option>
+                <option>Análisis gratuito de mi web</option>
+                <option>E-commerce</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Cuéntanos más</label>
+              <textarea rows="4" placeholder="Describe brevemente tu proyecto y objetivos..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full btn--lg">
+              Enviar y recibir análisis gratuito →
+            </button>
+            <p class="form-note">Sin compromiso. Te respondemos en &lt;2h.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">Matt<span>Designs</span></a>
+          <p>Webs profesionales que convierten visitantes en clientes.</p>
+        </div>
+        <div class="footer__links">
+          <div>
+            <h4>Servicios</h4>
+            <a href="#servicios">Diseño Web</a>
+            <a href="#servicios">SEO</a>
+            <a href="#servicios">Landing Pages</a>
+            <a href="#servicios">Email Marketing</a>
+          </div>
+          <div>
+            <h4>Empresa</h4>
+            <a href="#proceso">Proceso</a>
+            <a href="#proyectos">Portfolio</a>
+            <a href="#precios">Precios</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 MattDesigns. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- SUCCESS TOAST -->
+  <div class="toast" id="toast">
+    <span>✓</span> ¡Genial! Te contactamos en menos de 2 horas.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
