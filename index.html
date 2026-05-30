@@ -1,12 +1,187 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MattDesigns — Diseño Web que Convierte</title>
-  <meta name="description" content="Creamos webs profesionales que generan clientes reales. Diseño web premium, SEO y estrategia digital para negocios que quieren crecer." />
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ═══ PRIMARY META ═══ -->
+  <title>MattDesigns | Diseño Web Profesional que Convierte Visitas en Clientes</title>
+  <meta name="title"       content="MattDesigns | Diseño Web Profesional que Convierte Visitas en Clientes" />
+  <meta name="description" content="Agencia de diseño web profesional. Creamos webs con animaciones premium que generan leads reales para clínicas, abogados, coaches y más. Entrega en 7 días. Primera consulta gratis." />
+  <meta name="keywords"    content="diseño web profesional, agencia diseño web, páginas web profesionales, web que convierte, captación de leads, SEO, landing pages, diseño web para negocios, MattDesigns" />
+  <meta name="author"      content="MattDesigns" />
+  <meta name="robots"      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#7c3aed" />
+  <meta name="language"    content="es" />
+  <link rel="canonical"    href="https://mattdesigns.dev/" />
+  <link rel="alternate"    hreflang="es" href="https://mattdesigns.dev/" />
+
+  <!-- ═══ OPEN GRAPH / FACEBOOK ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://mattdesigns.dev/" />
+  <meta property="og:site_name"   content="MattDesigns" />
+  <meta property="og:locale"      content="es_ES" />
+  <meta property="og:title"       content="MattDesigns | Diseño Web Profesional que Convierte" />
+  <meta property="og:description" content="Creamos webs con animaciones premium que generan leads reales. Sin plantillas. Entrega en 7 días. Primera consulta gratis." />
+  <meta property="og:image"       content="https://mattdesigns.dev/assets/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="MattDesigns — Diseño Web Profesional" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@mattdesigns" />
+  <meta name="twitter:title"       content="MattDesigns | Diseño Web Profesional que Convierte" />
+  <meta name="twitter:description" content="Creamos webs con animaciones premium que generan leads reales. Sin plantillas. Entrega en 7 días." />
+  <meta name="twitter:image"       content="https://mattdesigns.dev/assets/og-image.png" />
+
+  <!-- ═══ PERFORMANCE ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://i.pravatar.cc" />
+
+  <!-- ═══ STRUCTURED DATA — ProfessionalService ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MattDesigns",
+    "url": "https://mattdesigns.dev",
+    "email": "hello@mattdesigns.dev",
+    "description": "Agencia de diseño web profesional especializada en webs que convierten visitas en clientes. Diseño web, SEO, landing pages y captación de leads.",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Transferencia bancaria, Tarjeta de crédito",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "ES"
+    },
+    "serviceType": ["Diseño Web", "SEO", "Landing Pages", "Email Marketing", "Captación de Leads"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Diseño Web",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Web Starter",
+          "price": "697",
+          "priceCurrency": "EUR",
+          "description": "Web profesional de hasta 5 páginas con diseño responsive y SEO básico."
+        },
+        {
+          "@type": "Offer",
+          "name": "Web Pro",
+          "price": "1497",
+          "priceCurrency": "EUR",
+          "description": "Web de hasta 10 páginas con animaciones de scroll premium y estrategia de captación de leads."
+        },
+        {
+          "@type": "Offer",
+          "name": "Web Enterprise",
+          "description": "Proyecto a medida con páginas ilimitadas, automatizaciones y soporte dedicado."
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "120",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Carlos M." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "En el primer mes ya teníamos 40 leads nuevos desde la web. La diferencia es brutal."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Laura P." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Ahora recibo 3-5 consultas al día. Antes con mi web antigua conseguía cero."
+      }
+    ],
+    "sameAs": [
+      "https://github.com/Matias124811fiv/mattdesigns"
+    ]
+  }
+  </script>
+
+  <!-- ═══ STRUCTURED DATA — FAQPage ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿En cuánto tiempo tengo mi web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El plan Starter se entrega en 7 días. El Pro puede tardar hasta 10 días dependiendo de la complejidad. Los proyectos Enterprise tienen plazos acordados en la propuesta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito tener todo el contenido listo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Te ayudamos a redactar los textos de tu web enfocados en convertir. Solo necesitamos que nos cuentes tu negocio, lo demás lo hacemos nosotros."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántos leads puedo esperar el primer mes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de tu sector y tráfico actual. Nuestros clientes ven de media un aumento del 200-300% en contactos el primer trimestre. El análisis gratuito te da una estimación real para tu caso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Podré editar la web yo mismo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Según el plan, te entregamos acceso a un panel sencillo donde puedes cambiar textos, imágenes y precios sin saber nada de código. También te hacemos una formación de 1 hora."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si no me gusta el resultado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Incluimos 2 rondas de revisiones ilimitadas. Y si tras la entrega final no estás satisfecho, te devolvemos el dinero en 14 días. Sin preguntas."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══ STRUCTURED DATA — WebSite + SearchAction ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MattDesigns",
+    "url": "https://mattdesigns.dev",
+    "description": "Agencia de diseño web profesional que crea webs con animaciones premium para negocios que quieren más clientes.",
+    "inLanguage": "es-ES",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MattDesigns",
+      "url": "https://mattdesigns.dev",
+      "email": "hello@mattdesigns.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mattdesigns.dev/assets/MattDesigns Logo with Colorful Stripes.png"
+      }
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
