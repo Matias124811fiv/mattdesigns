@@ -100,8 +100,7 @@ function handleForm(formId, message) {
   });
 }
 
-handleForm('contactForm',  '¡Recibido! Te contactamos en menos de 2 horas.');
-handleForm('leadForm',     '¡Guía enviada! Revisa tu email.');
+handleForm('leadForm', '¡Guía enviada! Revisa tu email.');
 
 
 /* ============================================================
