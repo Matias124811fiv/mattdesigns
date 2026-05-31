@@ -102,6 +102,40 @@ function handleForm(formId, message) {
 
 handleForm('leadForm', '¡Guía enviada! Revisa tu email.');
 
+/* ============================================================
+   CONTACT FORM — AJAX submit, no redirect
+   ============================================================ */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        btn.textContent = '¡Enviado!';
+        btn.style.background = '#16a34a';
+        btn.style.boxShadow = '0 0 30px rgba(22,163,74,.4)';
+        contactForm.reset();
+      } else {
+        btn.textContent = 'Error, intentá de nuevo';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error, intentá de nuevo';
+      btn.disabled = false;
+    }
+  });
+}
+
 
 /* ============================================================
    SMOOTH SCROLL for in-page anchors
