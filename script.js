@@ -100,7 +100,45 @@ function handleForm(formId, message) {
   });
 }
 
-handleForm('leadForm', '¡Guía enviada! Revisa tu email.');
+/* ============================================================
+   LEAD FORM — Brevo API
+   ============================================================ */
+const leadForm = document.getElementById('leadForm');
+if (leadForm) {
+  leadForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = leadForm.querySelector('input[type="email"]').value.trim();
+    const btn   = leadForm.querySelector('button[type="submit"]');
+
+    btn.disabled    = true;
+    btn.textContent = 'Enviando...';
+
+    try {
+      const res = await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'Accept':       'application/json',
+          'Content-Type': 'application/json',
+          'api-key':      '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'
+        },
+        body: JSON.stringify({ email, listIds: [5], updateEnabled: true })
+      });
+
+      if (res.ok || res.status === 204 || res.status === 201) {
+        btn.textContent   = '¡Enviado! Revisá tu email';
+        btn.style.background = '#16a34a';
+        btn.style.boxShadow  = '0 0 30px rgba(22,163,74,.4)';
+        leadForm.reset();
+      } else {
+        btn.textContent = 'Error, intentá de nuevo';
+        btn.disabled    = false;
+      }
+    } catch {
+      btn.textContent = 'Error, intentá de nuevo';
+      btn.disabled    = false;
+    }
+  });
+}
 
 /* ============================================================
    CONTACT FORM — AJAX submit, no redirect
