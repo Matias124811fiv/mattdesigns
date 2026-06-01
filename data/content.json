@@ -158,7 +158,7 @@
     }
   ],
   "hero": {
-    "badge": "Diseño web premium · Resultados reale",
+    "badge": "Diseño web premium · Resultados reales",
     "subtitulo": "Creamos webs que no solo se ven increíbles, sino que convierten visitantes en leads cualificados. Sin plantillas genéricas. Sin excusas."
   },
   "cta_banner": {
@@ -226,12 +226,5 @@
       ]
     }
   ],
-  "equipo": [
-    {
-      "nombre": "Matías Fabregas",
-      "cargo": "Fundador & Diseñador Web",
-      "descripcion": "Especialista en crear webs que convierten visitas en clientes reales.",
-      "avatar": "https://i.pravatar.cc/120?img=11"
-    }
-  ]
+  "equipo": []
 }
