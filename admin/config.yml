@@ -8,99 +8,74 @@ locale: es
 
 collections:
   - name: "sitio"
-    label: "Contenido del sitio"
+    label: "Mi web"
     files:
-
-      - name: "hero"
-        label: "🏠 Hero (inicio)"
+      - name: "contenido"
+        label: "Editar contenido"
         file: "data/content.json"
         format: json
         fields:
-          - label: "Hero"
+
+          - label: "🏠 Hero"
             name: "hero"
             widget: "object"
+            collapsed: false
             fields:
               - { label: "Texto del badge", name: "badge", widget: "string" }
               - { label: "Subtítulo", name: "subtitulo", widget: "text" }
 
-      - name: "estadisticas"
-        label: "📊 Estadísticas"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Estadísticas"
+          - label: "📊 Estadísticas"
             name: "estadisticas"
             widget: "list"
+            collapsed: true
             fields:
               - { label: "Número", name: "numero", widget: "number" }
               - { label: "Sufijo (+, %, x, d...)", name: "sufijo", widget: "string" }
               - { label: "Etiqueta", name: "etiqueta", widget: "string" }
 
-      - name: "servicios"
-        label: "⚡ Servicios"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Servicios"
+          - label: "⚡ Servicios"
             name: "servicios"
             widget: "list"
+            collapsed: true
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
-              - label: "Características (3 ítems)"
-                name: "caracteristicas"
-                widget: "list"
+              - { label: "Características (una por línea)", name: "caracteristicas", widget: "list" }
               - { label: "¿Es el más popular?", name: "destacado", widget: "boolean", default: false, required: false }
 
-      - name: "cta_banner"
-        label: "🎯 Banner CTA"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Banner CTA"
+          - label: "🎯 Banner CTA"
             name: "cta_banner"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "string" }
               - { label: "Texto del botón", name: "boton", widget: "string" }
 
-      - name: "proceso"
-        label: "🔄 Proceso"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Pasos del proceso"
+          - label: "🔄 Proceso (pasos)"
             name: "proceso"
             widget: "list"
+            collapsed: true
             fields:
               - { label: "Número (01, 02...)", name: "numero", widget: "string" }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
               - { label: "Tiempo (ej: Día 1)", name: "tiempo", widget: "string" }
 
-      - name: "testimonios"
-        label: "⭐ Testimonios"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Testimonios"
+          - label: "⭐ Testimonios"
             name: "testimonios"
             widget: "list"
+            collapsed: true
             fields:
               - { label: "Texto del testimonio", name: "texto", widget: "text" }
               - { label: "Nombre", name: "nombre", widget: "string" }
               - { label: "Cargo / Empresa", name: "cargo", widget: "string" }
               - { label: "URL del avatar", name: "avatar", widget: "string" }
 
-      - name: "precios"
-        label: "💰 Precios"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Precios"
+          - label: "💰 Precios"
             name: "precios"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Nota al pie", name: "nota", widget: "text" }
               - label: "Planes"
@@ -110,63 +85,42 @@ collections:
                   - { label: "Nombre del plan", name: "nombre", widget: "string" }
                   - { label: "Precio (sin $)", name: "precio", widget: "string" }
                   - { label: "Descripción corta", name: "descripcion", widget: "string" }
-                  - label: "Características (lo que incluye)"
-                    name: "caracteristicas"
-                    widget: "list"
-                  - label: "No incluye"
-                    name: "no_incluye"
-                    widget: "list"
-                    required: false
+                  - { label: "Características incluidas", name: "caracteristicas", widget: "list" }
+                  - { label: "No incluye", name: "no_incluye", widget: "list", required: false }
                   - { label: "Texto del botón", name: "boton", widget: "string" }
                   - { label: "¿Es el plan destacado?", name: "destacado", widget: "boolean", default: false, required: false }
 
-      - name: "faq"
-        label: "❓ Preguntas frecuentes"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Preguntas frecuentes"
+          - label: "❓ Preguntas frecuentes"
             name: "faq"
             widget: "list"
+            collapsed: true
             fields:
               - { label: "Pregunta", name: "pregunta", widget: "string" }
               - { label: "Respuesta", name: "respuesta", widget: "text" }
 
-      - name: "lead_magnet"
-        label: "📥 Lead Magnet"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Lead Magnet"
+          - label: "📥 Lead Magnet (guía)"
             name: "lead_magnet"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Título de la guía", name: "titulo", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "string" }
               - { label: "Texto del botón", name: "boton", widget: "string" }
 
-      - name: "contacto"
-        label: "📞 Contacto"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Contacto"
+          - label: "📞 Contacto"
             name: "contacto"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Título (parte en gradiente)", name: "titulo_gradiente", widget: "string" }
+              - { label: "Título (parte en color)", name: "titulo_gradiente", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
               - { label: "Teléfono", name: "telefono", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
 
-      - name: "footer"
-        label: "🔻 Footer"
-        file: "data/content.json"
-        format: json
-        fields:
-          - label: "Footer"
+          - label: "🔻 Footer"
             name: "footer"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Tagline", name: "tagline", widget: "string" }
