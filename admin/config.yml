@@ -122,16 +122,6 @@ collections:
               - { label: "Teléfono", name: "telefono", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
 
-          - label: "👥 Equipo"
-            name: "equipo"
-            widget: "list"
-            collapsed: true
-            fields:
-              - { label: "Nombre completo", name: "nombre", widget: "string" }
-              - { label: "Cargo / Rol", name: "cargo", widget: "string" }
-              - { label: "Descripción corta", name: "descripcion", widget: "text" }
-              - { label: "URL de foto", name: "avatar", widget: "string", hint: "Link directo a una imagen (jpg/png)" }
-
           - label: "🔻 Footer"
             name: "footer"
             widget: "object"

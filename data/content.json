@@ -107,14 +107,6 @@
     "telefono": "+54 9 11 5799-1179",
     "email": "hello@mattdesigns.dev"
   },
-  "equipo": [
-    {
-      "nombre": "Matías Fabregas",
-      "cargo": "Fundador & Diseñador Web",
-      "descripcion": "Especialista en crear webs que convierten visitas en clientes reales.",
-      "avatar": "https://i.pravatar.cc/120?img=11"
-    }
-  ],
   "footer": {
     "tagline": "Webs profesionales que convierten visitantes en clientes."
   }
