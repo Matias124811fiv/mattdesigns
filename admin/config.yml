@@ -4,6 +4,7 @@ backend:
 
 site_url: https://mattdesigns.dev
 display_url: https://mattdesigns.dev
+logo_url: https://mattdesigns.dev/assets/MattDesigns%20Logo%20with%20Colorful%20Stripes.png
 
 media_folder: assets
 public_folder: /assets

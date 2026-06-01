@@ -5,42 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MattDesigns — Panel de edición</title>
   <style>
-    #cms-welcome-bar {
+    /* Custom footer */
+    #cms-custom-footer {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      bottom: 0; left: 0; right: 0;
       z-index: 99999;
-      background: linear-gradient(135deg, #7c3aed, #06b6d4);
-      color: #fff;
-      padding: 10px 24px;
+      background: #f5f5f5;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 8px;
       font-family: Arial, sans-serif;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.25);
+      font-size: 12px;
+      color: #888;
     }
-    #cms-welcome-bar a {
-      color: #fff;
-      font-weight: 700;
-      text-decoration: underline;
-    }
-    #cms-welcome-bar strong { font-weight: 700; }
-    #cms-welcome-close {
-      position: absolute;
-      right: 16px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      line-height: 1;
-      opacity: .8;
-    }
-    #cms-welcome-close:hover { opacity: 1; }
-    /* push Decap CMS content down */
-    [class*="App__AppWrapper"],
-    [class*="AppWrapper"] { padding-top: 40px !important; }
   </style>
 </head>
 <body>
@@ -49,39 +26,75 @@
   <script>
     const SITE_URL = 'https://mattdesigns.dev';
 
-    function showWelcomeBanner(name) {
-      if (document.getElementById('cms-welcome-bar')) return;
-      const bar = document.createElement('div');
-      bar.id = 'cms-welcome-bar';
-      bar.innerHTML = `
-        <span>👋 ¡Bienvenido, <strong>${name}</strong>! &nbsp;·&nbsp; Estás editando
-          <a href="${SITE_URL}" target="_blank" rel="noopener">${SITE_URL}</a>
-        </span>
-        <button id="cms-welcome-close" onclick="this.parentElement.remove()">×</button>
-      `;
-      document.body.prepend(bar);
+    /* ── Footer copyright ── */
+    const footer = document.createElement('div');
+    footer.id = 'cms-custom-footer';
+    footer.textContent = '© 2026 MattDesigns | Panel de administración';
+    document.body.appendChild(footer);
+
+    /* ── Welcome message injected into the heading "Mi web" ── */
+    function injectWelcome(name) {
+      const obs = new MutationObserver(() => {
+        /* Find the main h1/h2 that contains "Mi web" */
+        const headings = document.querySelectorAll('h1, h2, [class*="Collection"] h1, [class*="Header"] h1');
+        headings.forEach(h => {
+          if (h.textContent.trim() === 'Mi web' && !h.dataset.welcomed) {
+            h.dataset.welcomed = '1';
+            h.textContent = `¡Bienvenido, ${name}!`;
+            h.style.background = 'linear-gradient(135deg,#7c3aed,#06b6d4)';
+            h.style.webkitBackgroundClip = 'text';
+            h.style.webkitTextFillColor = 'transparent';
+            h.style.backgroundClip = 'text';
+
+            /* Insert site URL below */
+            const sub = document.createElement('p');
+            sub.textContent = `Estás editando: ${SITE_URL}`;
+            sub.style.cssText = 'font-size:13px;color:#888;margin:4px 0 0;font-weight:normal;-webkit-text-fill-color:#888;background:none;';
+            h.insertAdjacentElement('afterend', sub);
+          }
+        });
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
     }
 
-    // Try immediately if user is already logged in
-    let attempts = 0;
-    const poll = setInterval(function () {
-      attempts++;
-      if (attempts > 30) { clearInterval(poll); return; }
+    /* ── Role-based UI hiding ── */
+    function applyRoleRestrictions(user) {
+      const roles = user?.app_metadata?.roles || [];
+      const isAdmin = roles.includes('admin');
+      if (!isAdmin) {
+        /* Hide Users and Configuration nav items for non-admins */
+        const obs2 = new MutationObserver(() => {
+          document.querySelectorAll('nav a, [class*="Nav"] a, [class*="menu"] a').forEach(a => {
+            const text = a.textContent.trim().toLowerCase();
+            if (text === 'usuarios' || text === 'configuración' || text === 'users' || text === 'settings') {
+              a.style.display = 'none';
+            }
+          });
+        });
+        obs2.observe(document.body, { childList: true, subtree: true });
+      }
+    }
 
+    /* ── Bootstrap on identity ready ── */
+    let pollCount = 0;
+    const poll = setInterval(() => {
+      pollCount++;
+      if (pollCount > 40) { clearInterval(poll); return; }
       const user = window.netlifyIdentity && window.netlifyIdentity.currentUser();
       if (user) {
         clearInterval(poll);
         const name = user.user_metadata?.full_name || user.email || 'Usuario';
-        showWelcomeBanner(name);
+        injectWelcome(name);
+        applyRoleRestrictions(user);
       }
-    }, 500);
+    }, 400);
 
-    // Also catch login event
-    window.addEventListener('load', function () {
+    window.addEventListener('load', () => {
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('login', function (user) {
+        window.netlifyIdentity.on('login', user => {
           const name = user.user_metadata?.full_name || user.email || 'Usuario';
-          showWelcomeBanner(name);
+          injectWelcome(name);
+          applyRoleRestrictions(user);
         });
       }
     });
