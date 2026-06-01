@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: assets
+public_folder: /assets
+
+locale: es
+
+collections:
+  - name: "configuracion"
+    label: "Configuración del sitio"
+    files:
+      - name: "contenido"
+        label: "Contenido editable"
+        file: "data/content.json"
+        format: json
+        fields:
+          - label: "Subtítulo del hero"
+            name: "hero_sub"
+            widget: "text"
+            hint: "Texto que aparece debajo del título principal"
+
+          - label: "Contacto"
+            name: "contacto"
+            widget: "object"
+            fields:
+              - { label: "Teléfono", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+
+          - label: "Precios"
+            name: "precios"
+            widget: "object"
+            fields:
+              - { label: "Plan Starter", name: "starter", widget: "string", hint: "Ejemplo: 399.000" }
+              - { label: "Plan Pro", name: "pro", widget: "string", hint: "Ejemplo: 699.000" }
+              - { label: "Plan Ultra", name: "ultra", widget: "string", hint: "Ejemplo: 899.000" }

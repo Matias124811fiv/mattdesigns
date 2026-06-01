@@ -1,4 +1,20 @@
 /* ============================================================
+   CMS CONTENT — load from data/content.json
+   ============================================================ */
+fetch('/data/content.json')
+  .then(r => r.json())
+  .then(d => {
+    const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+    set('cms-hero-sub',      d.hero_sub);
+    set('cms-phone',         d.contacto?.phone);
+    set('cms-email',         d.contacto?.email);
+    set('cms-price-starter', d.precios?.starter);
+    set('cms-price-pro',     d.precios?.pro);
+    set('cms-price-ultra',   d.precios?.ultra);
+  })
+  .catch(() => {});
+
+/* ============================================================
    NAV — scroll state
    ============================================================ */
 const nav = document.getElementById('nav');
