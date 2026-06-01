@@ -120,6 +120,18 @@ fetch('/data/content.json')
       });
     }
 
+    /* Equipo */
+    const teamGrid = document.getElementById('cms-equipo');
+    if (teamGrid && d.equipo?.length) {
+      teamGrid.innerHTML = d.equipo.map(m => `
+        <div class="team-card reveal-up">
+          <img class="team-card__avatar" src="${m.avatar}" alt="${m.nombre}" />
+          <div class="team-card__name">${m.nombre}</div>
+          <div class="team-card__cargo">${m.cargo}</div>
+          <p class="team-card__desc">${m.descripcion}</p>
+        </div>`).join('');
+    }
+
     /* Lead Magnet */
     set('cms-lead-titulo', d.lead_magnet?.titulo);
     set('cms-lead-desc',   d.lead_magnet?.descripcion);
