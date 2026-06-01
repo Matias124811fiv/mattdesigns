@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: https://mattdesigns.dev
+display_url: https://mattdesigns.dev
+
 media_folder: assets
 public_folder: /assets
 locale: es

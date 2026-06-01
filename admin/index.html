@@ -4,8 +4,87 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MattDesigns — Panel de edición</title>
+  <style>
+    #cms-welcome-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: linear-gradient(135deg, #7c3aed, #06b6d4);
+      color: #fff;
+      padding: 10px 24px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    }
+    #cms-welcome-bar a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    #cms-welcome-bar strong { font-weight: 700; }
+    #cms-welcome-close {
+      position: absolute;
+      right: 16px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1;
+      opacity: .8;
+    }
+    #cms-welcome-close:hover { opacity: 1; }
+    /* push Decap CMS content down */
+    [class*="App__AppWrapper"],
+    [class*="AppWrapper"] { padding-top: 40px !important; }
+  </style>
 </head>
 <body>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    const SITE_URL = 'https://mattdesigns.dev';
+
+    function showWelcomeBanner(name) {
+      if (document.getElementById('cms-welcome-bar')) return;
+      const bar = document.createElement('div');
+      bar.id = 'cms-welcome-bar';
+      bar.innerHTML = `
+        <span>👋 ¡Bienvenido, <strong>${name}</strong>! &nbsp;·&nbsp; Estás editando
+          <a href="${SITE_URL}" target="_blank" rel="noopener">${SITE_URL}</a>
+        </span>
+        <button id="cms-welcome-close" onclick="this.parentElement.remove()">×</button>
+      `;
+      document.body.prepend(bar);
+    }
+
+    // Try immediately if user is already logged in
+    let attempts = 0;
+    const poll = setInterval(function () {
+      attempts++;
+      if (attempts > 30) { clearInterval(poll); return; }
+
+      const user = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+      if (user) {
+        clearInterval(poll);
+        const name = user.user_metadata?.full_name || user.email || 'Usuario';
+        showWelcomeBanner(name);
+      }
+    }, 500);
+
+    // Also catch login event
+    window.addEventListener('load', function () {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('login', function (user) {
+          const name = user.user_metadata?.full_name || user.email || 'Usuario';
+          showWelcomeBanner(name);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
