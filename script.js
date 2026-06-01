@@ -1,16 +1,142 @@
 /* ============================================================
    CMS CONTENT — load from data/content.json
    ============================================================ */
+const SERVICE_ICONS = [
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`
+];
+
+const PROCESS_ALIGNS = ['reveal-left','reveal-right','reveal-left','reveal-right'];
+
 fetch('/data/content.json')
   .then(r => r.json())
   .then(d => {
-    const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
-    set('cms-hero-sub',      d.hero_sub);
-    set('cms-phone',         d.contacto?.phone);
-    set('cms-email',         d.contacto?.email);
-    set('cms-price-starter', d.precios?.starter);
-    set('cms-price-pro',     d.precios?.pro);
-    set('cms-price-ultra',   d.precios?.ultra);
+    const set = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.textContent = val; };
+
+    /* Hero */
+    set('cms-hero-badge', d.hero?.badge);
+    set('cms-hero-sub',   d.hero?.subtitulo);
+
+    /* Stats */
+    (d.estadisticas || []).forEach((s, i) => {
+      const numEl = document.getElementById(`cms-stat-${i}-num`);
+      if (numEl) { numEl.dataset.target = s.numero; }
+      set(`cms-stat-${i}-suf`,   s.sufijo);
+      set(`cms-stat-${i}-label`, s.etiqueta);
+    });
+
+    /* Services */
+    const svcGrid = document.getElementById('cms-services');
+    if (svcGrid && d.servicios?.length) {
+      svcGrid.innerHTML = d.servicios.map((s, i) => `
+        <div class="service-card ${i===0?'reveal-left':i===2||i===5?'reveal-right':'reveal-up'}">
+          <div class="service-card__icon">${SERVICE_ICONS[i] || SERVICE_ICONS[0]}</div>
+          <h3>${s.titulo}</h3>
+          <p>${s.descripcion}</p>
+          <ul>${(s.caracteristicas||[]).map(c=>`<li>${c}</li>`).join('')}</ul>
+          ${s.destacado ? '<div class="service-card__badge">Más popular</div>' : ''}
+        </div>`).join('');
+    }
+
+    /* CTA Banner */
+    set('cms-cta-titulo', d.cta_banner?.titulo);
+    set('cms-cta-desc',   d.cta_banner?.descripcion);
+    set('cms-cta-boton',  d.cta_banner?.boton);
+
+    /* Process */
+    const procEl = document.getElementById('cms-process');
+    if (procEl && d.proceso?.length) {
+      const line = procEl.querySelector('.process__line');
+      procEl.innerHTML = '';
+      if (line) procEl.appendChild(line);
+      d.proceso.forEach((p, i) => {
+        const div = document.createElement('div');
+        div.className = `process__step ${PROCESS_ALIGNS[i] || 'reveal-up'}`;
+        div.innerHTML = `
+          <div class="process__num">${p.numero}</div>
+          <div class="process__body">
+            <h3>${p.titulo}</h3>
+            <p>${p.descripcion}</p>
+            <span class="process__time">${p.tiempo}</span>
+          </div>`;
+        procEl.appendChild(div);
+      });
+    }
+
+    /* Testimonials */
+    const testGrid = document.getElementById('cms-testimonials');
+    if (testGrid && d.testimonios?.length) {
+      testGrid.innerHTML = d.testimonios.map(t => `
+        <div class="testimonial-card reveal-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"${t.texto}"</p>
+          <div class="testimonial-card__author">
+            <img src="${t.avatar}" alt="${t.nombre}" />
+            <div><strong>${t.nombre}</strong><span>${t.cargo}</span></div>
+          </div>
+        </div>`).join('');
+    }
+
+    /* Pricing */
+    if (d.precios?.planes) {
+      const ids = ['cms-price-starter','cms-price-pro','cms-price-ultra'];
+      const featIds = ['cms-feat-starter','cms-feat-pro','cms-feat-ultra'];
+      d.precios.planes.forEach((plan, i) => {
+        set(ids[i], plan.precio);
+        const ul = document.getElementById(featIds[i]);
+        if (ul) {
+          ul.innerHTML =
+            (plan.caracteristicas||[]).map(c=>`<li><span>✓</span> ${c}</li>`).join('') +
+            (plan.no_incluye||[]).map(c=>`<li class="muted"><span>✗</span> ${c}</li>`).join('');
+        }
+      });
+      set('cms-pricing-nota', d.precios.nota);
+    }
+
+    /* FAQ */
+    const faqEl = document.getElementById('cms-faq');
+    if (faqEl && d.faq?.length) {
+      faqEl.innerHTML = d.faq.map(f => `
+        <div class="faq__item reveal-up">
+          <button class="faq__question">${f.pregunta} <span>+</span></button>
+          <div class="faq__answer"><p>${f.respuesta}</p></div>
+        </div>`).join('');
+      /* re-init accordion */
+      faqEl.querySelectorAll('.faq__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const answer = item.querySelector('.faq__answer');
+          const isOpen = item.classList.contains('open');
+          faqEl.querySelectorAll('.faq__item.open').forEach(o => {
+            o.classList.remove('open');
+            o.querySelector('.faq__answer').style.maxHeight = null;
+          });
+          if (!isOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+        });
+      });
+    }
+
+    /* Lead Magnet */
+    set('cms-lead-titulo', d.lead_magnet?.titulo);
+    set('cms-lead-desc',   d.lead_magnet?.descripcion);
+
+    /* Contacto */
+    set('cms-contacto-titulo',    d.contacto?.titulo);
+    set('cms-contacto-gradiente', d.contacto?.titulo_gradiente);
+    set('cms-contacto-desc',      d.contacto?.descripcion);
+    set('cms-phone',              d.contacto?.telefono);
+    set('cms-email',              d.contacto?.email);
+
+    /* Footer */
+    set('cms-footer-tagline', d.footer?.tagline);
+
+    /* re-trigger reveal observer for newly rendered elements */
+    document.querySelectorAll('.reveal-up:not(.visible), .reveal-left:not(.visible), .reveal-right:not(.visible)')
+      .forEach(el => revealObs.observe(el));
   })
   .catch(() => {});
 

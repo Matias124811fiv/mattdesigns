@@ -216,7 +216,7 @@
     <div class="hero__content">
       <div class="hero__badge reveal-up">
         <span class="hero__badge-dot"></span>
-        Diseño web premium · Resultados reales
+        <span id="cms-hero-badge">Diseño web premium · Resultados reales</span>
       </div>
       <h1 class="hero__title reveal-up">
         Tu web debería<br />
@@ -284,20 +284,20 @@
     <div class="container">
       <div class="stats__grid">
         <div class="stat reveal-up">
-          <span class="stat__num" data-target="120">0</span><span class="stat__suffix">+</span>
-          <p>Proyectos entregados</p>
+          <span class="stat__num" id="cms-stat-0-num" data-target="120">0</span><span class="stat__suffix" id="cms-stat-0-suf">+</span>
+          <p id="cms-stat-0-label">Proyectos entregados</p>
         </div>
         <div class="stat reveal-up">
-          <span class="stat__num" data-target="94">0</span><span class="stat__suffix">%</span>
-          <p>Clientes que repiten</p>
+          <span class="stat__num" id="cms-stat-1-num" data-target="94">0</span><span class="stat__suffix" id="cms-stat-1-suf">%</span>
+          <p id="cms-stat-1-label">Clientes que repiten</p>
         </div>
         <div class="stat reveal-up">
-          <span class="stat__num" data-target="3">0</span><span class="stat__suffix">x</span>
-          <p>Más leads de media</p>
+          <span class="stat__num" id="cms-stat-2-num" data-target="3">0</span><span class="stat__suffix" id="cms-stat-2-suf">x</span>
+          <p id="cms-stat-2-label">Más leads de media</p>
         </div>
         <div class="stat reveal-up">
-          <span class="stat__num" data-target="7">0</span><span class="stat__suffix">d</span>
-          <p>Tiempo de entrega</p>
+          <span class="stat__num" id="cms-stat-3-num" data-target="7">0</span><span class="stat__suffix" id="cms-stat-3-suf">d</span>
+          <p id="cms-stat-3-label">Tiempo de entrega</p>
         </div>
       </div>
     </div>
@@ -311,7 +311,7 @@
         <h2>Todo lo que necesitas<br /><span class="gradient-text">en un solo lugar</span></h2>
         <p>Desde el diseño hasta la captación de leads, lo hacemos todo.</p>
       </div>
-      <div class="services__grid">
+      <div class="services__grid" id="cms-services">
         <div class="service-card reveal-left">
           <div class="service-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -394,10 +394,10 @@
     <div class="container">
       <div class="cta-banner__inner">
         <div>
-          <h2>¿Tu web actual no genera leads?</h2>
-          <p>Analizamos tu web gratis y te decimos exactamente qué está fallando.</p>
+          <h2 id="cms-cta-titulo">¿Tu web actual no genera leads?</h2>
+          <p id="cms-cta-desc">Analizamos tu web gratis y te decimos exactamente qué está fallando.</p>
         </div>
-        <a href="#contacto" class="btn btn--primary btn--lg">Análisis gratuito →</a>
+        <a href="#contacto" class="btn btn--primary btn--lg" id="cms-cta-boton">Análisis gratuito →</a>
       </div>
     </div>
   </section>
@@ -444,7 +444,7 @@
         <h2>De cero a web<br /><span class="gradient-text">en 7 días</span></h2>
         <p>Un proceso claro, sin sorpresas y con resultados garantizados.</p>
       </div>
-      <div class="process__steps">
+      <div class="process__steps" id="cms-process">
         <div class="process__line"></div>
         <div class="process__step reveal-left">
           <div class="process__num">01</div>
@@ -489,7 +489,7 @@
         <span class="section-tag">Testimonios</span>
         <h2>Lo que dicen<br /><span class="gradient-text">nuestros clientes</span></h2>
       </div>
-      <div class="testimonials__grid">
+      <div class="testimonials__grid" id="cms-testimonials">
         <div class="testimonial-card reveal-up">
           <div class="testimonial-card__stars">★★★★★</div>
           <p>"En el primer mes ya teníamos 40 leads nuevos desde la web. Antes con la web antigua conseguíamos cero. La diferencia es brutal."</p>
@@ -542,7 +542,7 @@
             <div class="pricing-card__price"><span>$</span><span id="cms-price-starter">399.000</span></div>
             <p>Para negocios que empiezan</p>
           </div>
-          <ul class="pricing-card__features">
+          <ul class="pricing-card__features" id="cms-feat-starter">
             <li><span>✓</span> Web de hasta 5 páginas</li>
             <li><span>✓</span> Diseño responsive</li>
             <li><span>✓</span> Formulario de contacto</li>
@@ -561,7 +561,7 @@
             <div class="pricing-card__price"><span>$</span><span id="cms-price-pro">699.000</span></div>
             <p>Para negocios que quieren crecer</p>
           </div>
-          <ul class="pricing-card__features">
+          <ul class="pricing-card__features" id="cms-feat-pro">
             <li><span>✓</span> Web de hasta 10 páginas</li>
             <li><span>✓</span> Animaciones de scroll premium</li>
             <li><span>✓</span> Estrategia de captación de leads</li>
@@ -578,7 +578,7 @@
             <div class="pricing-card__price"><span>$</span><span id="cms-price-ultra">899.000</span></div>
             <p>Para empresas y proyectos grandes</p>
           </div>
-          <ul class="pricing-card__features">
+          <ul class="pricing-card__features" id="cms-feat-ultra">
             <li><span>✓</span> Páginas ilimitadas</li>
             <li><span>✓</span> Animaciones de scroll premium</li>
             <li><span>✓</span> Sistema de reservas</li>
@@ -590,7 +590,7 @@
           <a href="#contacto" class="btn btn--outline btn--full">Hablemos →</a>
         </div>
       </div>
-      <p class="pricing__note reveal-up">Todos los planes NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%.</p>
+      <p class="pricing__note reveal-up" id="cms-pricing-nota">Todos los planes NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%.</p>
     </div>
   </section>
 
@@ -601,7 +601,7 @@
         <span class="section-tag">FAQ</span>
         <h2>Preguntas<br /><span class="gradient-text">frecuentes</span></h2>
       </div>
-      <div class="faq__list">
+      <div class="faq__list" id="cms-faq">
         <div class="faq__item reveal-up">
           <button class="faq__question">¿En cuánto tiempo tengo mi web? <span>+</span></button>
           <div class="faq__answer"><p>El plan Starter se entrega en 7 días. El Pro puede tardar hasta 10 días dependiendo de la complejidad. Los proyectos Ultra tienen plazos acordados en la propuesta.</p></div>
@@ -631,8 +631,8 @@
     <div class="container">
       <div class="lead-magnet__inner">
         <div class="lead-magnet__text">
-          <h2>Descarga gratis: <em>"10 errores que alejan clientes de tu web"</em></h2>
-          <p>La guía que usan nuestros clientes para duplicar sus leads en 30 días.</p>
+          <h2>Descarga gratis: <em id="cms-lead-titulo">"10 errores que alejan clientes de tu web"</em></h2>
+          <p id="cms-lead-desc">La guía que usan nuestros clientes para duplicar sus leads en 30 días.</p>
         </div>
         <form class="lead-magnet__form" id="leadForm">
           <input type="email" placeholder="tu@email.com" required />
@@ -648,8 +648,8 @@
       <div class="contact__inner">
         <div class="contact__left reveal-left">
           <span class="section-tag">Contacto</span>
-          <h2>Empieza hoy.<br /><span class="gradient-text">Tu competencia ya lo hace.</span></h2>
-          <p>Cuéntanos tu proyecto. Primera llamada gratis, sin compromiso. Te respondemos en menos de 2 horas en horario laboral.</p>
+          <h2><span id="cms-contacto-titulo">Empieza hoy.</span><br /><span class="gradient-text" id="cms-contacto-gradiente">Tu competencia ya lo hace.</span></h2>
+          <p id="cms-contacto-desc">Cuéntanos tu proyecto. Primera llamada gratis, sin compromiso. Te respondemos en menos de 2 horas en horario laboral.</p>
           <div class="contact__info">
             <div class="contact__info-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -707,7 +707,7 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="#" class="nav__logo">Matt<span>Designs</span></a>
-          <p>Webs profesionales que convierten visitantes en clientes.</p>
+          <p id="cms-footer-tagline">Webs profesionales que convierten visitantes en clientes.</p>
         </div>
         <div class="footer__links">
           <div>
