@@ -2,26 +2,26 @@
   "proceso": [
     {
       "numero": "01",
-      "titulo": "Llamada de Descubrimiento",
+      "titulo": "Descubrimiento de tu Negocio",
       "descripcion": "30 minutos para entender tu negocio, tus clientes ideales y lo que quieres conseguir con tu web. Sin tecnicismos.",
-      "tiempo": "Día 1"
+      "tiempo": "Día 1-2"
     },
     {
       "numero": "02",
-      "titulo": "Estrategia & Wireframes",
+      "titulo": "Estrategia",
       "descripcion": "Diseñamos la arquitectura de tu web pensando en la experiencia del usuario y en la captación de leads desde el primer momento.",
-      "tiempo": "Días 2-3"
+      "tiempo": "Días 3-4"
     },
     {
       "numero": "03",
       "titulo": "Diseño & Desarrollo",
-      "descripcion": "Construimos tu web con animaciones profesionales, código limpio y velocidad de carga optimizada. Ves el progreso en tiempo real.",
-      "tiempo": "Días 4-6"
+      "descripcion": "Construimos tu web con animaciones profesionales, código limpio y velocidad de carga optimizada.",
+      "tiempo": "Días 5-7"
     },
     {
       "numero": "04",
-      "titulo": "Lanzamiento & Seguimiento",
-      "descripcion": "Publicamos, conectamos Analytics y te entregamos un informe de primeras 30 días con datos de tráfico y leads captados.",
+      "titulo": "Lanzamiento",
+      "descripcion": "Creamos el dominio y lanzamos tu web a internet. En 7 dias, tenes tu web lista para usar.",
       "tiempo": "Día 7"
     }
   ],
@@ -128,16 +128,24 @@
       "respuesta": "No. Te ayudamos a redactar los textos de tu web enfocados en convertir. Solo necesitamos que nos cuentes tu negocio, lo demás lo hacemos nosotros."
     },
     {
-      "pregunta": "¿Cuántos leads puedo esperar el primer mes?",
-      "respuesta": "Depende de tu sector y tráfico actual. Nuestros clientes ven de media un aumento del 200-300% en contactos el primer trimestre. El análisis gratuito te da una estimación real para tu caso."
-    },
-    {
       "pregunta": "¿Podré editar la web yo mismo?",
-      "respuesta": "Sí. Según el plan, te entregamos acceso a un panel sencillo donde puedes cambiar textos, imágenes y precios sin saber nada de código. También te hacemos una formación de 1 hora."
+      "respuesta": "Sí. Según el plan, te entregamos acceso a un panel de control en donde podras hacer cambios sin saber nada de código. "
     },
     {
-      "pregunta": "¿Qué pasa si no me gusta el resultado?",
-      "respuesta": "Incluimos 2 rondas de revisiones ilimitadas. Y si tras la entrega final no estás satisfecho, te devolvemos el dinero en 7 días. Sin preguntas."
+      "pregunta": "¿Que plan me conviene?",
+      "respuesta": "El plan que te convenga depende de tu negocio. Si estas iniciando y solo queres tener una web simple, te recomendamos el plan Starter. Si ya iniciaste el negocio y queres implementar una nueva forma digital para poder conseguir mas clientes, te recomendamos el plan Pro. Y si tu negocio es grande y ya lleva años en el mercado, te recomendamos el plan Ultra."
+    },
+    {
+      "pregunta": "¿Todos los planes tienen acceso a un panel de control?",
+      "respuesta": "No, solo los planes Pro y Ultra tendran acceso al panel de control."
+    },
+    {
+      "pregunta": "¿El panel de control tiene algun costo?",
+      "respuesta": "Si, el panel de control incluye dos planes de pago. El panel de control simple, donde podras modificar cosas simples, como texto, imagenes, botones, etc y el panel de control completo podras configurar tu web de manera mas completa, pausar y renaduar tu web, modificar texto, imagenes, botones, colores, etc.\nCOSTO POR MES DE LOS PANELES:\nPanel Simple: $49.000 x mes\nPanel Completo: $79.000 x mes"
+    },
+    {
+      "pregunta": "¿Solo pagando el costo del plan ya puedo tener mi web funcionando?",
+      "respuesta": "No, ya que todavia hace falta el dominio y el hosting. Esto lo manejamos nosotros y tiene un costo mensual de $99.000 x mes."
     }
   ],
   "testimonios": [
