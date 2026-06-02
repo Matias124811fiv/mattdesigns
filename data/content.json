@@ -146,6 +146,10 @@
     {
       "pregunta": "¿Solo pagando el costo del plan ya puedo tener mi web funcionando?",
       "respuesta": "No, ya que todavia hace falta el dominio y el hosting. Esto lo manejamos nosotros y tiene un costo mensual de $99.000 x mes."
+    },
+    {
+      "pregunta": "¿Tengo que poner alguna seña?",
+      "respuesta": "Si, la seña para empezar a crear la web es del 50% ya que tenemos que asegurar los gastos de esta. Luego, al finalizar la pagina web, se abonara el otro 50% restante."
     }
   ],
   "testimonios": [
