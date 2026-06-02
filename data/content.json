@@ -21,7 +21,7 @@
     {
       "numero": "04",
       "titulo": "Lanzamiento",
-      "descripcion": "Creamos el dominio y lanzamos tu web a internet. En 7 dias, tenes tu web lista para usar.",
+      "descripcion": "Creamos el dominio y lanzamos tu web a internet. En 7 días, tenés tu web lista para usar.",
       "tiempo": "Día 7"
     }
   ],
@@ -31,7 +31,7 @@
     "boton": "Quiero la guía gratis →"
   },
   "precios": {
-    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Basico $49.000 x mes. Panel de Control Completo $79.000 x mes.",
+    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Básico $49.000/mes. Panel de Control Completo $79.000/mes.",
     "planes": [
       {
         "nombre": "Starter",
@@ -79,7 +79,7 @@
           "Animaciones de scroll premium",
           "Sistema de reservas",
           "SEO Completo",
-          "Velocidad de carga super rápida",
+          "Velocidad de carga súper rápida",
           "Mails con dominio (tu-estudio@ejemplo.com)",
           "Acceso prioritario al equipo de mantenimiento",
           "Panel de Control Completo"
@@ -129,27 +129,27 @@
     },
     {
       "pregunta": "¿Podré editar la web yo mismo?",
-      "respuesta": "Sí. Según el plan, te entregamos acceso a un panel de control en donde podras hacer cambios sin saber nada de código. "
+      "respuesta": "Sí. Según el plan, te entregamos acceso a un panel de control donde podrás hacer cambios sin saber nada de código."
     },
     {
-      "pregunta": "¿Que plan me conviene?",
-      "respuesta": "El plan que te convenga depende de tu negocio. Si estas iniciando y solo queres tener una web simple, te recomendamos el plan Starter. Si ya iniciaste el negocio y queres implementar una nueva forma digital para poder conseguir mas clientes, te recomendamos el plan Pro. Y si tu negocio es grande y ya lleva años en el mercado, te recomendamos el plan Ultra."
+      "pregunta": "¿Qué plan me conviene?",
+      "respuesta": "El plan que te convenga depende de tu negocio. Si estás iniciando y solo querés tener una web simple, te recomendamos el plan Starter. Si ya iniciaste el negocio y querés implementar una nueva forma digital para conseguir más clientes, te recomendamos el plan Pro. Y si tu negocio es grande y ya lleva años en el mercado, te recomendamos el plan Ultra."
     },
     {
       "pregunta": "¿Todos los planes tienen acceso a un panel de control?",
-      "respuesta": "No, solo los planes Pro y Ultra tendran acceso al panel de control."
+      "respuesta": "No, solo los planes Pro y Ultra tendrán acceso al panel de control."
     },
     {
-      "pregunta": "¿El panel de control tiene algun costo?",
-      "respuesta": "Si, el panel de control incluye dos planes de pago. El panel de control simple, donde podras modificar cosas simples, como texto, imagenes, botones, etc y el panel de control completo podras configurar tu web de manera mas completa, pausar y renaduar tu web, modificar texto, imagenes, botones, colores, etc.\nCOSTO POR MES DE LOS PANELES:\nPanel Simple: $49.000 x mes\nPanel Completo: $79.000 x mes"
+      "pregunta": "¿El panel de control tiene algún costo?",
+      "respuesta": "Sí, el panel de control tiene dos planes de pago. El panel básico te permite modificar textos, imágenes y botones. El panel completo te permite configurar tu web de manera más completa, pausar y reanudar tu web, modificar textos, imágenes, botones, colores y más.\nCOSTO MENSUAL:\nPanel Básico: $49.000/mes\nPanel Completo: $79.000/mes"
     },
     {
       "pregunta": "¿Solo pagando el costo del plan ya puedo tener mi web funcionando?",
-      "respuesta": "No, ya que todavia hace falta el dominio y el hosting. Esto lo manejamos nosotros y tiene un costo mensual de $99.000 x mes."
+      "respuesta": "No, todavía hace falta el dominio y el hosting. Esto lo manejamos nosotros y tiene un costo mensual de $99.000/mes."
     },
     {
       "pregunta": "¿Tengo que poner alguna seña?",
-      "respuesta": "Si, la seña para empezar a crear la web es del 50% ya que tenemos que asegurar los gastos de esta. Luego, al finalizar la pagina web, se abonara el otro 50% restante."
+      "respuesta": "Sí, la seña para empezar a crear la web es del 50%, ya que necesitamos cubrir los gastos iniciales. Al finalizar la página web, se abona el 50% restante."
     }
   ],
   "testimonios": [
