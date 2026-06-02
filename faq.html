@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas Frecuentes — MattDesigns</title>
+  <meta name="description" content="Respondemos todas tus dudas sobre nuestros servicios de diseño web, precios, plazos y panel de control." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mattdesigns.dev/faq.html" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .faq-page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 140px 24px 100px;
+    }
+    .faq-page__header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .faq-page__header h1 {
+      font-family: var(--font2);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .faq-page__header p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+    .faq-page__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 48px;
+      transition: color var(--trans);
+    }
+    .faq-page__back:hover { color: var(--text); }
+    .faq-page__cta {
+      text-align: center;
+      margin-top: 64px;
+      padding: 48px;
+      background: linear-gradient(135deg, rgba(124,58,237,.1), rgba(6,182,212,.08));
+      border: 1px solid rgba(124,58,237,.2);
+      border-radius: var(--radius-lg);
+    }
+    .faq-page__cta h2 {
+      font-family: var(--font2);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .faq-page__cta p {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: .95rem;
+    }
+    #faq-dynamic-list { display: flex; flex-direction: column; gap: 12px; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Matt<span>Designs</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#precios">Precios</a></li>
+        <li><a href="faq.html" style="color:var(--text)">FAQ</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <a href="index.html#contacto" class="btn btn--sm btn--outline nav__cta">Hablemos</a>
+    </div>
+  </nav>
+
+  <main class="faq-page">
+
+    <a href="index.html" class="faq-page__back">← Volver al inicio</a>
+
+    <div class="faq-page__header">
+      <span class="section-tag">FAQ</span>
+      <h1>Preguntas<br /><span class="gradient-text">frecuentes</span></h1>
+      <p>Todo lo que necesitás saber antes de empezar tu proyecto web con nosotros.</p>
+    </div>
+
+    <div id="faq-dynamic-list">
+      <!-- Se carga desde data/content.json -->
+      <div class="faq__item">
+        <button class="faq__question">Cargando preguntas... <span>+</span></button>
+        <div class="faq__answer"><p></p></div>
+      </div>
+    </div>
+
+    <div class="faq-page__cta">
+      <h2>¿No encontraste tu respuesta?</h2>
+      <p>Escribinos y te respondemos en menos de 24 horas hábiles.</p>
+      <a href="index.html#contacto" class="btn btn--primary btn--lg">Contactar →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>© 2026 MattDesigns. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="privacy.html">Política de Privacidad</a>
+          <a href="privacy.html">Aviso Legal</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Acordeón */
+    function initAccordion(container) {
+      container.querySelectorAll('.faq__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item   = btn.parentElement;
+          const answer = item.querySelector('.faq__answer');
+          const isOpen = item.classList.contains('open');
+          container.querySelectorAll('.faq__item.open').forEach(o => {
+            o.classList.remove('open');
+            o.querySelector('.faq__answer').style.maxHeight = null;
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+    }
+
+    /* Cargar FAQ desde content.json */
+    fetch('/data/content.json')
+      .then(r => r.json())
+      .then(d => {
+        const list = document.getElementById('faq-dynamic-list');
+        if (!list || !d.faq?.length) return;
+        list.innerHTML = d.faq.map(f => `
+          <div class="faq__item">
+            <button class="faq__question">${f.pregunta} <span>+</span></button>
+            <div class="faq__answer"><p>${f.respuesta.replace(/\n/g, '<br />')}</p></div>
+          </div>`).join('');
+        initAccordion(list);
+      })
+      .catch(() => {
+        document.getElementById('faq-dynamic-list').innerHTML =
+          '<p style="color:var(--muted);text-align:center">No se pudieron cargar las preguntas.</p>';
+      });
+  </script>
+
+</body>
+</html>
