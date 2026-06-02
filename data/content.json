@@ -1,79 +1,71 @@
 {
-  "hero": {
-    "badge": "Diseño web premium · Resultados reales",
-    "subtitulo": "Creamos webs que no solo se ven increíbles, sino que convierten visitantes en leads cualificados. Sin plantillas genéricas. Sin excusas."
-  },
-  "estadisticas": [
-    { "numero": 120, "sufijo": "+", "etiqueta": "Proyectos entregados" },
-    { "numero": 94,  "sufijo": "%", "etiqueta": "Clientes que repiten" },
-    { "numero": 3,   "sufijo": "x", "etiqueta": "Más leads de media" },
-    { "numero": 7,   "sufijo": "d", "etiqueta": "Tiempo de entrega" }
-  ],
-  "servicios": [
+  "proceso": [
     {
-      "titulo": "Diseño Web Premium",
-      "descripcion": "Webs a medida que reflejan tu marca y comunican valor desde el primer scroll. Responsive, rápidas y accesibles.",
-      "caracteristicas": ["Diseño único 100% personalizado", "Animaciones profesionales", "Optimización móvil perfecta"]
+      "numero": "01",
+      "titulo": "Llamada de Descubrimiento",
+      "descripcion": "30 minutos para entender tu negocio, tus clientes ideales y lo que quieres conseguir con tu web. Sin tecnicismos.",
+      "tiempo": "Día 1"
     },
     {
-      "titulo": "Captación de Leads",
-      "descripcion": "Diseñamos cada sección para guiar al visitante hacia la acción. CTAs estratégicos, formularios y funnels que convierten.",
-      "caracteristicas": ["Estrategia de conversión", "Formularios optimizados", "A/B testing incluido"],
-      "destacado": true
+      "numero": "02",
+      "titulo": "Estrategia & Wireframes",
+      "descripcion": "Diseñamos la arquitectura de tu web pensando en la experiencia del usuario y en la captación de leads desde el primer momento.",
+      "tiempo": "Días 2-3"
     },
     {
-      "titulo": "SEO & Posicionamiento",
-      "descripcion": "Tu web invisible no genera clientes. Optimizamos para que Google te encuentre y te ponga por delante de la competencia.",
-      "caracteristicas": ["SEO técnico y on-page", "Velocidad Core Web Vitals", "Informe mensual de resultados"]
+      "numero": "03",
+      "titulo": "Diseño & Desarrollo",
+      "descripcion": "Construimos tu web con animaciones profesionales, código limpio y velocidad de carga optimizada. Ves el progreso en tiempo real.",
+      "tiempo": "Días 4-6"
     },
     {
-      "titulo": "Email Marketing",
-      "descripcion": "Convertimos los leads que capta tu web en clientes de pago con secuencias de email automatizadas y personalizadas.",
-      "caracteristicas": ["Secuencias automatizadas", "Segmentación avanzada", "Tasas de apertura +40%"]
-    },
-    {
-      "titulo": "Landing Pages",
-      "descripcion": "Una sola página diseñada para convertir al máximo. Perfectas para lanzamientos, campañas de anuncios y eventos.",
-      "caracteristicas": ["Entrega en 48 horas", "Integración con Google Ads", "Seguimiento de conversiones"]
-    },
-    {
-      "titulo": "Mantenimiento & Soporte",
-      "descripcion": "Tu web siempre actualizada, segura y funcionando al 100%. Soporte técnico con respuesta en menos de 24h.",
-      "caracteristicas": ["Actualizaciones periódicas", "Backups diarios", "Soporte prioritario"]
+      "numero": "04",
+      "titulo": "Lanzamiento & Seguimiento",
+      "descripcion": "Publicamos, conectamos Analytics y te entregamos un informe de primeras 30 días con datos de tráfico y leads captados.",
+      "tiempo": "Día 7"
     }
   ],
-  "cta_banner": {
-    "titulo": "¿Tu web actual no genera leads?",
-    "descripcion": "Analizamos tu web gratis y te decimos exactamente qué está fallando.",
-    "boton": "Análisis gratuito →"
+  "lead_magnet": {
+    "titulo": "10 errores que alejan clientes de tu web",
+    "descripcion": "La guía que usan nuestros clientes para duplicar sus leads en 30 días.",
+    "boton": "Quiero la guía gratis →"
   },
-  "proceso": [
-    { "numero": "01", "titulo": "Llamada de Descubrimiento", "descripcion": "30 minutos para entender tu negocio, tus clientes ideales y lo que quieres conseguir con tu web. Sin tecnicismos.", "tiempo": "Día 1" },
-    { "numero": "02", "titulo": "Estrategia & Wireframes", "descripcion": "Diseñamos la arquitectura de tu web pensando en la experiencia del usuario y en la captación de leads desde el primer momento.", "tiempo": "Días 2-3" },
-    { "numero": "03", "titulo": "Diseño & Desarrollo", "descripcion": "Construimos tu web con animaciones profesionales, código limpio y velocidad de carga optimizada. Ves el progreso en tiempo real.", "tiempo": "Días 4-6" },
-    { "numero": "04", "titulo": "Lanzamiento & Seguimiento", "descripcion": "Publicamos, conectamos Analytics y te entregamos un informe de primeras 30 días con datos de tráfico y leads captados.", "tiempo": "Día 7" }
-  ],
-  "testimonios": [
-    { "texto": "En el primer mes ya teníamos 40 leads nuevos desde la web. Antes con la web antigua conseguíamos cero. La diferencia es brutal.", "nombre": "Carlos M.", "cargo": "CEO, Clínica Dental Sonrisa", "avatar": "https://i.pravatar.cc/48?img=10" },
-    { "texto": "Pensaba que mi web estaba bien. Cuando vi el análisis gratuito que me hicieron entendí por qué nadie me contactaba. Ahora recibo 3-5 consultas al día.", "nombre": "Laura P.", "cargo": "Arquitecta independiente", "avatar": "https://i.pravatar.cc/48?img=20" },
-    { "texto": "El proceso fue rapidísimo y el resultado superó mis expectativas. Entregaron en 6 días y la web es espectacular. Mis clientes me preguntan quién me la hizo.", "nombre": "Marcos R.", "cargo": "Dueño, Restaurante El Portal", "avatar": "https://i.pravatar.cc/48?img=30" }
-  ],
   "precios": {
-    "nota": "Todos los planes NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%.",
+    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Basico $49.000 x mes. Panel de Control Completo $79.000 x mes.",
     "planes": [
       {
         "nombre": "Starter",
         "precio": "399.000",
         "descripcion": "Para negocios que empiezan",
-        "caracteristicas": ["Web de hasta 5 páginas", "Diseño responsive", "Formulario de contacto", "Google Analytics", "SEO básico", "Entrega en 7 días"],
-        "no_incluye": ["Animaciones de scroll", "Estrategia de conversión", "Panel de Control"],
+        "caracteristicas": [
+          "Web de hasta 5 páginas",
+          "Diseño responsive",
+          "Formulario de contacto",
+          "Google Analytics",
+          "SEO básico",
+          "Entrega en 7 días"
+        ],
+        "no_incluye": [
+          "Animaciones de scroll",
+          "Estrategia de conversión",
+          "Panel de Control"
+        ],
         "boton": "Empezar →"
       },
       {
         "nombre": "Pro",
         "precio": "699.000",
         "descripcion": "Para negocios que quieren crecer",
-        "caracteristicas": ["Web de hasta 10 páginas", "Animaciones de scroll premium", "Estrategia de captación de leads", "SEO completo", "Velocidad de carga rápida", "Mantenimiento mensual gratis el primer mes", "Informe mensual de resultados", "Panel de Control Básico"],
+        "caracteristicas": [
+          "Web de hasta 10 páginas",
+          "Animaciones de scroll premium",
+          "Estrategia de captación de leads",
+          "SEO completo",
+          "Velocidad de carga rápida",
+          "Mantenimiento mensual gratis el primer mes",
+          "Informe mensual de resultados",
+          "Panel de Control Básico"
+        ],
         "no_incluye": [],
         "boton": "Quiero el Pro →",
         "destacado": true
@@ -82,24 +74,43 @@
         "nombre": "Ultra",
         "precio": "899.000",
         "descripcion": "Para empresas y proyectos grandes",
-        "caracteristicas": ["Páginas ilimitadas", "Animaciones de scroll premium", "Sistema de reservas", "SEO Completo", "Velocidad de carga super rápida", "Mails con dominio (tu-estudio@ejemplo.com)", "Acceso prioritario al equipo de mantenimiento", "Panel de Control Completo"],
+        "caracteristicas": [
+          "Páginas ilimitadas",
+          "Animaciones de scroll premium",
+          "Sistema de reservas",
+          "SEO Completo",
+          "Velocidad de carga super rápida",
+          "Mails con dominio (tu-estudio@ejemplo.com)",
+          "Acceso prioritario al equipo de mantenimiento",
+          "Panel de Control Completo"
+        ],
         "no_incluye": [],
         "boton": "Hablemos →"
       }
     ]
   },
-  "faq": [
-    { "pregunta": "¿En cuánto tiempo tengo mi web?", "respuesta": "El plan Starter se entrega en 7 días. El Pro puede tardar hasta 10 días dependiendo de la complejidad. Los proyectos Ultra tienen plazos acordados en la propuesta." },
-    { "pregunta": "¿Necesito tener todo el contenido listo?", "respuesta": "No. Te ayudamos a redactar los textos de tu web enfocados en convertir. Solo necesitamos que nos cuentes tu negocio, lo demás lo hacemos nosotros." },
-    { "pregunta": "¿Cuántos leads puedo esperar el primer mes?", "respuesta": "Depende de tu sector y tráfico actual. Nuestros clientes ven de media un aumento del 200-300% en contactos el primer trimestre. El análisis gratuito te da una estimación real para tu caso." },
-    { "pregunta": "¿Podré editar la web yo mismo?", "respuesta": "Sí. Según el plan, te entregamos acceso a un panel sencillo donde puedes cambiar textos, imágenes y precios sin saber nada de código. También te hacemos una formación de 1 hora." },
-    { "pregunta": "¿Qué pasa si no me gusta el resultado?", "respuesta": "Incluimos 2 rondas de revisiones ilimitadas. Y si tras la entrega final no estás satisfecho, te devolvemos el dinero en 7 días. Sin preguntas." }
+  "estadisticas": [
+    {
+      "numero": 120,
+      "sufijo": "+",
+      "etiqueta": "Proyectos entregados"
+    },
+    {
+      "numero": 94,
+      "sufijo": "%",
+      "etiqueta": "Clientes que repiten"
+    },
+    {
+      "numero": 3,
+      "sufijo": "x",
+      "etiqueta": "Más leads de media"
+    },
+    {
+      "numero": 7,
+      "sufijo": "d",
+      "etiqueta": "Tiempo de entrega"
+    }
   ],
-  "lead_magnet": {
-    "titulo": "10 errores que alejan clientes de tu web",
-    "descripcion": "La guía que usan nuestros clientes para duplicar sus leads en 30 días.",
-    "boton": "Quiero la guía gratis →"
-  },
   "contacto": {
     "titulo": "Empieza hoy.",
     "titulo_gradiente": "Tu competencia ya lo hace.",
@@ -107,7 +118,115 @@
     "telefono": "+54 9 11 5799-1179",
     "email": "hello@mattdesigns.dev"
   },
+  "faq": [
+    {
+      "pregunta": "¿En cuánto tiempo tengo mi web?",
+      "respuesta": "El plan Starter se entrega en 7 días. El Pro puede tardar hasta 10 días dependiendo de la complejidad. Los proyectos Ultra tienen plazos acordados en la propuesta."
+    },
+    {
+      "pregunta": "¿Necesito tener todo el contenido listo?",
+      "respuesta": "No. Te ayudamos a redactar los textos de tu web enfocados en convertir. Solo necesitamos que nos cuentes tu negocio, lo demás lo hacemos nosotros."
+    },
+    {
+      "pregunta": "¿Cuántos leads puedo esperar el primer mes?",
+      "respuesta": "Depende de tu sector y tráfico actual. Nuestros clientes ven de media un aumento del 200-300% en contactos el primer trimestre. El análisis gratuito te da una estimación real para tu caso."
+    },
+    {
+      "pregunta": "¿Podré editar la web yo mismo?",
+      "respuesta": "Sí. Según el plan, te entregamos acceso a un panel sencillo donde puedes cambiar textos, imágenes y precios sin saber nada de código. También te hacemos una formación de 1 hora."
+    },
+    {
+      "pregunta": "¿Qué pasa si no me gusta el resultado?",
+      "respuesta": "Incluimos 2 rondas de revisiones ilimitadas. Y si tras la entrega final no estás satisfecho, te devolvemos el dinero en 7 días. Sin preguntas."
+    }
+  ],
+  "testimonios": [
+    {
+      "texto": "En el primer mes ya teníamos 40 leads nuevos desde la web. Antes con la web antigua conseguíamos cero. La diferencia es brutal.",
+      "nombre": "Carlos M.",
+      "cargo": "CEO, Clínica Dental Sonrisa",
+      "avatar": "https://i.pravatar.cc/48?img=10"
+    },
+    {
+      "texto": "Pensaba que mi web estaba bien. Cuando vi el análisis gratuito que me hicieron entendí por qué nadie me contactaba. Ahora recibo 3-5 consultas al día.",
+      "nombre": "Laura P.",
+      "cargo": "Arquitecta independiente",
+      "avatar": "https://i.pravatar.cc/48?img=20"
+    },
+    {
+      "texto": "El proceso fue rapidísimo y el resultado superó mis expectativas. Entregaron en 6 días y la web es espectacular. Mis clientes me preguntan quién me la hizo.",
+      "nombre": "Marcos R.",
+      "cargo": "Dueño, Restaurante El Portal",
+      "avatar": "https://i.pravatar.cc/48?img=30"
+    }
+  ],
+  "hero": {
+    "badge": "Diseño web premium · Resultados reales",
+    "subtitulo": "Creamos webs que no solo se ven increíbles, sino que convierten visitantes en leads cualificados. Sin plantillas genéricas. Sin excusas."
+  },
+  "cta_banner": {
+    "titulo": "¿Tu web actual no genera leads?",
+    "descripcion": "Analizamos tu web gratis y te decimos exactamente qué está fallando.",
+    "boton": "Análisis gratuito →"
+  },
   "footer": {
     "tagline": "Webs profesionales que convierten visitantes en clientes."
-  }
+  },
+  "servicios": [
+    {
+      "titulo": "Diseño Web Premium",
+      "descripcion": "Webs a medida que reflejan tu marca y comunican valor desde el primer scroll. Responsive, rápidas y accesibles.",
+      "caracteristicas": [
+        "Diseño único 100% personalizado",
+        "Animaciones profesionales",
+        "Optimización móvil perfecta"
+      ]
+    },
+    {
+      "titulo": "Captación de Leads",
+      "descripcion": "Diseñamos cada sección para guiar al visitante hacia la acción. CTAs estratégicos, formularios y funnels que convierten.",
+      "caracteristicas": [
+        "Estrategia de conversión",
+        "Formularios optimizados",
+        "A/B testing incluido"
+      ],
+      "destacado": true
+    },
+    {
+      "titulo": "SEO & Posicionamiento",
+      "descripcion": "Tu web invisible no genera clientes. Optimizamos para que Google te encuentre y te ponga por delante de la competencia.",
+      "caracteristicas": [
+        "SEO técnico y on-page",
+        "Velocidad Core Web Vitals",
+        "Informe mensual de resultados"
+      ]
+    },
+    {
+      "titulo": "Email Marketing",
+      "descripcion": "Convertimos los leads que capta tu web en clientes de pago con secuencias de email automatizadas y personalizadas.",
+      "caracteristicas": [
+        "Secuencias automatizadas",
+        "Segmentación avanzada",
+        "Tasas de apertura +40%"
+      ]
+    },
+    {
+      "titulo": "Landing Pages",
+      "descripcion": "Una sola página diseñada para convertir al máximo. Perfectas para lanzamientos, campañas de anuncios y eventos.",
+      "caracteristicas": [
+        "Entrega en 48 horas",
+        "Integración con Google Ads",
+        "Seguimiento de conversiones"
+      ]
+    },
+    {
+      "titulo": "Mantenimiento & Soporte",
+      "descripcion": "Tu web siempre actualizada, segura y funcionando al 100%. Soporte técnico con respuesta en menos de 24h.",
+      "caracteristicas": [
+        "Actualizaciones periódicas",
+        "Backups diarios",
+        "Soporte prioritario"
+      ]
+    }
+  ]
 }
