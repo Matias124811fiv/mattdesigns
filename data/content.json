@@ -66,14 +66,14 @@
         "precio": "399.000",
         "descripcion": "Para negocios que empiezan",
         "caracteristicas": ["Web de hasta 5 páginas", "Diseño responsive", "Formulario de contacto", "Google Analytics", "SEO básico", "Entrega en 7 días"],
-        "no_incluye": ["Animaciones de scroll", "Estrategia de conversión"],
+        "no_incluye": ["Animaciones de scroll", "Estrategia de conversión", "Panel de Control"],
         "boton": "Empezar →"
       },
       {
         "nombre": "Pro",
         "precio": "699.000",
         "descripcion": "Para negocios que quieren crecer",
-        "caracteristicas": ["Web de hasta 10 páginas", "Animaciones de scroll premium", "Estrategia de captación de leads", "SEO completo", "Velocidad de carga rápida", "Mantenimiento mensual gratis el primer mes", "Informe mensual de resultados"],
+        "caracteristicas": ["Web de hasta 10 páginas", "Animaciones de scroll premium", "Estrategia de captación de leads", "SEO completo", "Velocidad de carga rápida", "Mantenimiento mensual gratis el primer mes", "Informe mensual de resultados", "Panel de Control Básico"],
         "no_incluye": [],
         "boton": "Quiero el Pro →",
         "destacado": true
@@ -82,7 +82,7 @@
         "nombre": "Ultra",
         "precio": "899.000",
         "descripcion": "Para empresas y proyectos grandes",
-        "caracteristicas": ["Páginas ilimitadas", "Animaciones de scroll premium", "Sistema de reservas", "SEO Completo", "Velocidad de carga super rápida", "Mails con dominio (tu-estudio@ejemplo.com)", "Acceso prioritario al equipo de mantenimiento"],
+        "caracteristicas": ["Páginas ilimitadas", "Animaciones de scroll premium", "Sistema de reservas", "SEO Completo", "Velocidad de carga super rápida", "Mails con dominio (tu-estudio@ejemplo.com)", "Acceso prioritario al equipo de mantenimiento", "Panel de Control Completo"],
         "no_incluye": [],
         "boton": "Hablemos →"
       }
