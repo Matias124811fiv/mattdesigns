@@ -14,7 +14,7 @@ export async function handler(event) {
     const verifyData = await verifyRes.json();
 
     if (!verifyData.success || verifyData.score < 0.5) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'reCAPTCHA inválido' }) };
+      return { statusCode: 400, body: JSON.stringify({ error: 'reCAPTCHA inválido', debug: verifyData }) };
     }
 
     const apiKeyBrevo = process.env.APIBREVO;
