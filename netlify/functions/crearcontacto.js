@@ -14,14 +14,14 @@ export async function handler(event) {
     const verifyData = await verifyRes.json();
 
     if (!verifyData.success || verifyData.score < 0.5) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'reCAPTCHA inválido', debug: verifyData }) };
+      return { statusCode: 400, body: JSON.stringify({ error: 'reCAPTCHA inválido' }) };
     }
 
     const apiKeyBrevo = process.env.APIBREVO;
 
     const datosBrevo = {
       email,
-      listIds: 5,
+      listIds: [5],
       updateEnabled: true
     };
 
