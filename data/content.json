@@ -46,8 +46,7 @@
           "Entrega en 7 días"
         ],
         "no_incluye": [
-          "Animaciones de scroll",
-          "Estrategia de conversión",
+          "Portal para Clientes",
           "Panel de Control"
         ],
         "boton": "Empezar →"
@@ -66,7 +65,9 @@
           "Informe mensual de resultados",
           "Panel de Control Básico"
         ],
-        "no_incluye": [],
+        "no_incluye": [
+          "Portal para Clientes"
+        ],
         "boton": "Quiero el Pro →",
         "destacado": true
       },
@@ -82,7 +83,8 @@
           "Velocidad de carga súper rápida",
           "Mails con dominio (tu-estudio@ejemplo.com)",
           "Acceso prioritario al equipo de mantenimiento",
-          "Panel de Control Completo"
+          "Panel de Control Completo",
+          "Portal para Clientes"
         ],
         "no_incluye": [],
         "boton": "Hablemos →"
