@@ -4,7 +4,7 @@ export async function handler(event) {
   }
 
   try {
-    const { email, recaptchaToken } = JSON.parse(event.body);
+    const { recaptchaToken, ...formData } = JSON.parse(event.body);
 
     // Verificar reCAPTCHA v3
     const verifyRes = await fetch(
@@ -17,27 +17,19 @@ export async function handler(event) {
       return { statusCode: 400, body: JSON.stringify({ error: 'reCAPTCHA inválido' }) };
     }
 
-    const apiKeyBrevo = process.env.APIBREVO;
-
-    const datosBrevo = {
-      email,
-      listIds: 5,
-      updateEnabled: true
-    };
-
-    const res = await fetch('https://api.brevo.com/v3/contacts', {
+    // Reenviar a Formspree
+    const formspreeRes = await fetch('https://formspree.io/f/xgoqbnjw', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'api-key': apiKeyBrevo
+        'Accept': 'application/json'
       },
-      body: JSON.stringify(datosBrevo)
+      body: JSON.stringify(formData)
     });
 
     return {
-      statusCode: res.status,
-      body: JSON.stringify({ success: res.ok })
+      statusCode: formspreeRes.status,
+      body: JSON.stringify({ success: formspreeRes.ok })
     };
 
   } catch (error) {

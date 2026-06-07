@@ -255,6 +255,18 @@ function handleForm(formId, message) {
 }
 
 /* ============================================================
+   RECAPTCHA v3 — helper
+   ============================================================ */
+const RECAPTCHA_SITE_KEY = '6LdwZRItAAAAAIPknqR9238HSIfBTIA-x6v1hCPB';
+function getRecaptchaToken(action) {
+  return new Promise((resolve, reject) => {
+    grecaptcha.ready(() => {
+      grecaptcha.execute(RECAPTCHA_SITE_KEY, { action }).then(resolve).catch(reject);
+    });
+  });
+}
+
+/* ============================================================
    LEAD FORM — Brevo API
    ============================================================ */
 const leadForm = document.getElementById('leadForm');
@@ -268,13 +280,11 @@ if (leadForm) {
     btn.textContent = 'Enviando...';
 
     try {
-      // Llamas a tu función local de Netlify de forma segura
+      const recaptchaToken = await getRecaptchaToken('lead');
       const res = await fetch('/.netlify/functions/crearcontacto', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, recaptchaToken })
       });
 
       if (res.ok || res.status === 204 || res.status === 201) {
@@ -286,7 +296,7 @@ if (leadForm) {
         btn.textContent = 'Error, intentá de nuevo';
         btn.disabled = false;
       }
-    } catch (error) {
+    } catch {
       btn.textContent = 'Error, intentá de nuevo';
       btn.disabled = false;
     }
@@ -295,7 +305,7 @@ if (leadForm) {
 
 
 /* ============================================================
-   CONTACT FORM — AJAX submit, no redirect
+   CONTACT FORM — via Netlify function (reCAPTCHA + Formspree)
    ============================================================ */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -306,10 +316,13 @@ if (contactForm) {
     btn.textContent = 'Enviando...';
 
     try {
-      const res = await fetch(contactForm.action, {
+      const recaptchaToken = await getRecaptchaToken('contact');
+      const data = Object.fromEntries(new FormData(contactForm));
+
+      const res = await fetch('/.netlify/functions/contacto', {
         method: 'POST',
-        body: new FormData(contactForm),
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, recaptchaToken })
       });
 
       if (res.ok) {
