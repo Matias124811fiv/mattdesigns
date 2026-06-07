@@ -257,11 +257,11 @@ function handleForm(formId, message) {
 /* ============================================================
    RECAPTCHA v3 — helper
    ============================================================ */
-const RECAPTCHA_SITE_KEY = '6LdwZRItAAAAAIPknqR9238HSIfBTIA-x6v1hCPB';
+const RECAPTCHA_SITE_KEY = '6LdanBItAAAAANK42XLiN4xZ7DgCYM14Ji84paD4';
 function getRecaptchaToken(action) {
   return new Promise((resolve, reject) => {
-    grecaptcha.enterprise.ready(() => {
-      grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, { action }).then(resolve).catch(reject);
+    grecaptcha.ready(() => {
+      grecaptcha.execute(RECAPTCHA_SITE_KEY, { action }).then(resolve).catch(reject);
     });
   });
 }
