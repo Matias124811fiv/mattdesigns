@@ -260,8 +260,8 @@ function handleForm(formId, message) {
 const RECAPTCHA_SITE_KEY = '6LdwZRItAAAAAIPknqR9238HSIfBTIA-x6v1hCPB';
 function getRecaptchaToken(action) {
   return new Promise((resolve, reject) => {
-    grecaptcha.ready(() => {
-      grecaptcha.execute(RECAPTCHA_SITE_KEY, { action }).then(resolve).catch(reject);
+    grecaptcha.enterprise.ready(() => {
+      grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, { action }).then(resolve).catch(reject);
     });
   });
 }
