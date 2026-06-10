@@ -893,6 +893,55 @@ ul { list-style: none; }
   color: var(--muted);
 }
 
+/* Pricing categories */
+.pricing__category {
+  margin: 48px 0 28px;
+}
+.pricing__category-title {
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+}
+.pricing__category-sub {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* Profesional plan grid */
+.pricing__grid--pro {
+  display: flex;
+  justify-content: center;
+}
+.pricing-card--pro {
+  max-width: 780px;
+  width: 100%;
+  background: linear-gradient(160deg, rgba(16,185,129,.1) 0%, var(--surface) 55%);
+  border-color: rgba(16,185,129,.4);
+  box-shadow: 0 0 70px rgba(16,185,129,.13);
+}
+.pricing-card--pro .pricing-card__name--pro { color: #10b981; }
+.pricing-card--pro .pricing-card__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 32px;
+}
+.pricing-card__badge--pro {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+.pricing-card__price--consult span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #10b981;
+}
+@media (max-width: 600px) {
+  .pricing-card--pro .pricing-card__features { grid-template-columns: 1fr; }
+}
+
 /* ============================================================
    FAQ
    ============================================================ */

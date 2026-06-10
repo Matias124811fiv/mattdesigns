@@ -31,7 +31,7 @@
     "boton": "Quiero la guía gratis →"
   },
   "precios": {
-    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Básico $49.000/mes. Panel de Control Completo $79.000/mes.",
+    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Básico $49.000/mes. Panel de Control Completo $79.000/mes. Pagos procesados con Mercado Pago Checkout.",
     "planes": [
       {
         "nombre": "Starter",
@@ -83,10 +83,11 @@
           "Velocidad de carga súper rápida",
           "Mails con dominio (tu-estudio@ejemplo.com)",
           "Acceso prioritario al equipo de mantenimiento",
-          "Panel de Control Completo",
+          "Panel de Control Completo"
+        ],
+        "no_incluye": [
           "Portal para Clientes"
         ],
-        "no_incluye": [],
         "boton": "Hablemos →"
       }
     ]
