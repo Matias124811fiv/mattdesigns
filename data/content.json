@@ -31,7 +31,7 @@
     "boton": "Quiero la guía gratis →"
   },
   "precios": {
-    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Básico $49.000/mes. Panel de Control Completo $79.000/mes. Pagos procesados con Mercado Pago Checkout.",
+    "nota": "Todos los planes son de UN SOLO pago y NO incluyen dominio ni hosting. Garantía de devolución de 7 días si no estás satisfecho. Seña del 50%. Panel de Control Básico $49.000/mes. Panel de Control Completo $79.000/mes.",
     "planes": [
       {
         "nombre": "Starter",
